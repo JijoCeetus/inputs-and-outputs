@@ -6,14 +6,16 @@ import {ChildComponent} from './child.component';
     template: `
         <div class="parent">
             <h1>parent</h1>
-            <p>Value entered in child component:</p>
-            <input type="text" />
+            <p>Value entered in child component:{{childValue}}</p>
+            <input type="text" #parentInput (keyup)="0" ><br>
             <div class="child">
-                <childs></childs>
+                <child [parentValue]="parentInput.value" (childChanged)="childValue=$event"></child>
             </div>
         </div>
     `,
+    directives: [ChildComponent],
+    inputs: ['childValue']
 })
 export class AppComponent {
-
+    childValue: string;
 }

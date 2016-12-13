@@ -1,1 +1,15 @@
 body{padding:32px;margin:32px;font-family:Roboto,Arial,sans-serif;font-size:16px}
+.parent{
+    width:500px;
+    height: auto;
+    background-color:aqua;
+    padding: 20px;
+}
+.child{
+    width: 400px;
+    height: auto;
+    background-color: gold;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
